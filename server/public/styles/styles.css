@@ -14,4 +14,5 @@ div > a > div > p{
       /* float: left; */
       margin: auto;
       border: 1px solid black;
+      text-align: center;
 }

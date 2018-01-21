@@ -5,22 +5,28 @@ galleryApp.controller('GalleryController', function(){
 
     self.pictures = [
     self.pictureOne = {
-        toggle: true
+        toggle: true,
+        likes: 0
     },
     self.pictureTwo = {
-        toggle: true
+        toggle: true,
+        likes: 0
     },
     self.pictureThree = {
-        toggle: true
+        toggle: true,
+        likes: 0
     },
     self.pictureFour = {
-        toggle: true
+        toggle: true,
+        likes: 0
     },
     self.pictureFive = {
-        toggle: true
+        toggle: true,
+        likes: 0
     },
     self.pictureSix = {
-        toggle: true
+        toggle: true,
+        likes: 0
     }
 ]
 
@@ -33,7 +39,6 @@ galleryApp.controller('GalleryController', function(){
     }
     
     self.likeButton = function(picture){
-        console.log('Clicked button for:', picture);
-        
+        picture.likes += 1;
     }
 });

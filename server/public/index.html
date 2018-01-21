@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <h1>My Gallery</h1>
+                <h1>My Gallery</h1><br>
             </div>
         </div>
     <main ng-controller="GalleryController as vm">
@@ -20,52 +20,58 @@
             <div class="col-sm-1 col-md-3">
                 <a href ng-click="vm.toggleClick(vm.pictureOne)"><div ng-show="vm.pictureOne.toggle">
                     <img ng-src="images/hanging-in-the-dorms.jpg" ng-model="vm.pictureOne"></div></a><br>
-                    <button ng-click="vm.likeButton(vm.pictureOne)">Like</button>
+                    <button ng-show="vm.pictureOne.toggle" ng-click="vm.likeButton(vm.pictureOne)">Like</button>
                 <a ng-click="vm.toggleClick(vm.pictureOne)"><div ng-hide="vm.pictureOne.toggle">
                     <p>Hanging out in the dorms</p>
                 </div></a>
+                <p>{{vm.pictureOne.likes}} People have liked this image</p>
             </div>
-            <div class="col-sm-1 col-md-offset-2 col-md-3">
+            <div class="col-sm-1 col-md-offset-2 col-md-4">
                 <a href ng-click="vm.toggleClick(vm.pictureTwo)"><div ng-show="vm.pictureTwo.toggle">
                     <img src="images/hiking-in-ouachita.jpg" ng-model="vm.pictureTwo"></div></a><br>
-                    <button ng-click="vm.likeButton(vm.pictureTwo)">Like</button>
+                    <button ng-show="vm.pictureTwo.toggle" ng-click="vm.likeButton(vm.pictureTwo)">Like</button>
                 <a ng-click="vm.toggleClick(vm.pictureTwo)"><div ng-hide="vm.pictureTwo.toggle">
                     <p>Hiking in Ouachita Arkansas</p>
                 </div></a>
+                <p>{{vm.pictureTwo.likes}} People have liked this image</p>
             </div>
             <div class="col-sm-1 col-md-offset-2 col-md-3">
                 <a href ng-click="vm.toggleClick(vm.pictureThree)"><div ng-show="vm.pictureThree.toggle">
                     <img src="images/me-and-my-brothers.jpg" ng-model="vm.pictureThree"></div></a><br>
-                    <button ng-click="vm.likeButton(vm.pictureThree)">Like</button>
+                    <button ng-show="vm.pictureThree.toggle" ng-click="vm.likeButton(vm.pictureThree)">Like</button>
                 <a ng-click="vm.toggleClick(vm.pictureThree)"><div ng-hide="vm.pictureThree.toggle">
                     <p>Me and my brothers at a tournament hosted by our friends</p>
                 </div></a>
+                <p>{{vm.pictureThree.likes}} People have liked this image</p>
           </div>
         </div>
         <div class="row">
             <div class="col-sm-3">
                 <a href ng-click="vm.toggleClick(vm.pictureFour)"><div ng-show="vm.pictureFour.toggle">
                     <img src="images/montana-snowboarding.jpg" ng-model="vm.pictureFour"></div></a><br>
-                    <button ng-click="vm.likeButton(vm.pictureFour)">Like</button>
+                    <button ng-show="vm.pictureFour.toggle" ng-click="vm.likeButton(vm.pictureFour)">Like</button>
                 <a ng-click="vm.toggleClick(vm.pictureFour)"><div ng-hide="vm.pictureFour.toggle">
                     <p>During Spring Break for many years my friends and I would go up to Montana to snowboard on the mountains</p>
                 </div></a>
+                <p>{{vm.pictureFour.likes}} People have liked this image</p>
             </div>
-            <div class="col-sm-offset-1 col-sm-3">
+            <div class="col-sm-offset-1 col-sm-4">
                 <a href ng-click="vm.toggleClick(vm.pictureFive)"><div ng-show="vm.pictureFive.toggle">
                     <img src="images/ross-mountain.jpg" ng-model="vm.pictureFive"></div></a><br>
-                    <button ng-click="vm.likeButton(vm.pictureFive)">Like</button>
+                    <button ng-show="vm.pictureFive.toggle" ng-click="vm.likeButton(vm.pictureFive)">Like</button>
                 <a ng-click="vm.toggleClick(vm.pictureFive)"><div ng-hide="vm.pictureFive.toggle">
                     <p>My first time climbing mountains in Colorado, amazing view!</p>
                 </div></a>
+                <p>{{vm.pictureFive.likes}} People have liked this image</p>
             </div>
             <div class="col-sm-offset-1 col-sm-3">
                 <a href ng-click="vm.toggleClick(vm.pictureSix)"><div ng-show="vm.pictureSix.toggle">
                     <img src="images/wilderness-selfie.jpg" ng-model="vm.pictureSix"></div></a><br>
-                    <button ng-click="vm.likeButton(vm.pictureSix)">Like</button>
+                    <button ng-show="vm.pictureSix.toggle" ng-click="vm.likeButton(vm.pictureSix)">Like</button>
                 <a ng-click="vm.toggleClick(vm.pictureSix)"><div ng-hide="vm.pictureSix.toggle">
                     <p>While hiking in Ouachita Arkansas I had to take a selfie with my friend's camera</p>
                 </div></a>
+                <p>{{vm.pictureSix.likes}} People have liked this image</p>
             </div>
             </div>
         </main>
