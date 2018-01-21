@@ -1,0 +1,17 @@
+div > a > div > img{
+    /* display: flex; */
+    height: 200px;
+    width: auto;
+    /* float: left; */
+    margin: auto;
+    border: 1px solid black;
+}
+
+div > a > div > p{
+      /* display: flex; */
+      height: 200px;
+      width: auto;
+      /* float: left; */
+      margin: auto;
+      border: 1px solid black;
+}
